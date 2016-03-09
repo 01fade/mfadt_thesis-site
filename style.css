@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000078;
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+#WebGL-output canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#Stats-output {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+#intro {
+    width: 40vw;
+    height: 50vh;
+    padding: 25vh 30vw 25vh 30vw;
+    color: #fff;
+    position: fixed;
+    z-index: 10;
+    background-color: #000;
+}
+
+button {
+    padding: 20px;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    font-size: inherit;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+a,
+a:visited {
+    color: #ff;
+    text-decoration: none;
+}
+
+a:hover,
+span {
+    border-bottom: 1px solid #ff;
+}
+
+#container {
+    position: fixed;
+    bottom: 20px;
+    width: 100vw;
+    /*margin: auto;*/
+    color: #000078;
+    letter-spacing: 1px;
+}
+
+#events {
+    position: absolute;
+    bottom: 0;
+}
+
+#events p{
+    float: left;
+    position: relative;
+    bottom: 0;
+    padding: 0 10px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+#events p:first-child{
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+#one {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#two {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#three {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+i,
+.wider {
+    letter-spacing: 3px;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 2px;
+    line-height: 1.6em;
+}
