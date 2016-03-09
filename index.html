@@ -2,23 +2,23 @@
 <html>
 <head>
     <title>BETWEEN SPACES - MFADT 2016</title>
-    <!-- Author _ Hang Do Thi Duc ( 22-8miles.com ) -->
-    <!-- Code Base _ https://github.com/josdirksen/learning-threejs - Example 10.11 - Video texture-->
-    <!-- Shaders _ https://github.com/jeromeetienne/threex.badtvpproc -->
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,500,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script>
+        if(window.navigator.userAgent.indexOf("Mobile") == -1) {
+            console.log(window.navigator.userAgent.indexOf("Mobile"));
+            window.location.replace("fun.html");
+        }
+    </script>
 </head>
 <body>
-    <div id="Stats-output"></div>
-    <div id="WebGL-output"></div>
     <div id="container">
-        <div id="events">
             <p><span id="one">Between Spaces</span>
                 <br/><br/>
                 <span id="two">M<i>F</i><span class="wider">A</span> Design <span class="small">and</span> Technology
                 <br/>Class <i>of</i> 2016
                 <br/>Thesis Show</span><br/>
-                <br/><span id="three">May 17–21, 2016</span>
+                <br/><span id="three">May 17-21, 2016</span>
             </p>
             <p><b>Thesis Exhibition</b>
                 <br/> Tue, May 17 - Sat, May 21
@@ -36,27 +36,7 @@
                 <br/> Fri, May 20
                 <br/> 66 West 12th Street,
                 <br/>The Auditorium</p>
-        </div>
     </div>
-    <!-- libaries -->
-    <script type="text/javascript" src="js/libs/three.min.js"></script>
-    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
-    <!-- post processing required-->
-    <script type="text/javascript" src="js/postprocessing_required/CopyShader.js"></script>
-    <script type="text/javascript" src="js/postprocessing_required/EffectComposer.js"></script>
-    <script type="text/javascript" src="js/postprocessing_required/RenderPass.js"></script>
-    <script type="text/javascript" src="js/postprocessing_required/MaskPass.js"></script>
-    <script type="text/javascript" src="js/postprocessing_required/ShaderPass.js"></script>
-    <!-- post processing shaders -->
-    <script src="js/postprocessing_shaders/DotScreenShader.js"></script>
-    <script src="js/postprocessing_shaders/RGBShiftShader.js"></script>
-    <script src="js/postprocessing_shaders/BadTVShader.js"></script>
-    <script src="js/postprocessing_shaders/FilmShader.js"></script>
-    <script src="js/postprocessing_shaders/StaticShader.js"></script>
-    <!-- stats, gui -->
-    <script type="text/javascript" src="js/libs/stats.min.js"></script>
-    <script type="text/javascript" src="js/libs/dat.gui.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

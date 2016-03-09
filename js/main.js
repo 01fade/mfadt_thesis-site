@@ -8,16 +8,6 @@ var rgbPass, badtvPass, staticPass, filmPass;
 var renderPass, copyPass;
 var gui, controls, stats;
 
-$(window).on("load", function() {
-    init();
-    animate();
-    keyControl();
-    // workaround for remove pixelated video
-    $(".folder:last input").trigger("click");
-    // hide gui
-    $(".dg").hide();
-})
-
 function init() {
     scene = new THREE.Scene();
     camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -10000, 10000)
@@ -202,3 +192,13 @@ function animate() {
     composer.render(camera, scene);
     // stats.update();
 }
+
+$(window).on("load", function() {
+    init();
+    animate();
+    keyControl();
+    // workaround for remove pixelated video
+    $(".folder:last input").trigger("click");
+    // hide gui
+    $(".dg").hide();
+})

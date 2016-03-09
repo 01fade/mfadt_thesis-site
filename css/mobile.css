@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #db6a4b;
+    color: #000078;
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+    line-height: 1.6rem;
+    background-image: url(../img/mobile.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+#container {
+	width: 90vw;
+	top: 0; right: 0; left: 0; bottom: 0;
+	position: absolute;
+	padding: 60px 5vw;
+	overflow: scroll;
+	margin: auto;
+}
+
+#one {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#two {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#three {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+i,
+.wider {
+    letter-spacing: 3px;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 2px;
+    line-height: 1.6em;
+}
+
+p:first-child {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
