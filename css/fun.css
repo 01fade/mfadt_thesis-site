@@ -1,8 +1,27 @@
+@font-face {
+    font-family: FreeUniversalRegular;
+    src: url("../font/FreeUniversalRegular.ttf");
+}
+
+@font-face {
+    font-family: FreeUniversalBoldItalic;
+    src: url("../font/FreeUniversalBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: FreeUniversalItalic;
+    src: url("../font/FreeUniversalItalic.ttf");
+}
+
+@font-face {
+    font-family: FreeUniversalBold;
+    src: url("../font/FreeUniversalBold.ttf");
+}
+
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #000078;
-    font-family: Oswald, sans-serif;
+    font-family: "FreeUniversalRegular", "Oswald", sans-serif;
     font-weight: 300;
     line-height: 2em;
 }
@@ -23,17 +42,123 @@ body {
     left: 0;
 }
 
-#intro {
-    width: 40vw;
-    height: 50vh;
-    padding: 25vh 30vw 25vh 30vw;
-    color: #fff;
+#container {
     position: fixed;
-    z-index: 10;
-    background-color: #000;
+    bottom: 80px;
+    width: 100vw;
 }
 
-button {
+#title {
+    width: 60vw;
+    top: 100px;
+    left: 40px;
+    position: fixed;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+#events {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#events p {
+    font-size: 16px;
+    float: left;
+    width: 100vw;
+    padding: 8px 40px;
+}
+
+/*@media screen and (min-width: 980px) {
+    #events p {
+        width: initial;
+    }
+}*/
+
+b {
+    font-family: "FreeUniversalBold", "Oswald", sans-serif;
+}
+
+#one {
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-family: "FreeUniversalBold", "Oswald", sans-serif;
+}
+
+#two {
+    letter-spacing: 2px;
+}
+
+#three {
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: 8px;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+i,
+.wider {
+    letter-spacing: 3px;
+}
+
+p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+    margin: 0;
+    color: #221D68;
+}
+
+#dt {
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    top: 70vh;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg);
+    /* Internet Explorer */
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+#show {
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 20;
+    right: 25vw;
+    top: 25vh;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg);
+    /* Internet Explorer */
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+#class {
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 20;
+    right: 30vw;
+    bottom: 10vh;
+}
+
+
+/*button {
     padding: 20px;
     background-color: #000;
     border: 2px solid #fff;
@@ -57,66 +182,4 @@ a:visited {
 a:hover,
 span {
     border-bottom: 1px solid #ff;
-}
-
-#container {
-    position: fixed;
-    bottom: 20px;
-    width: 100vw;
-    /*margin: auto;*/
-    color: #000078;
-    letter-spacing: 1px;
-}
-
-#events {
-    position: absolute;
-    bottom: 0;
-}
-
-#events p{
-    float: left;
-    position: relative;
-    bottom: 0;
-    padding: 0 10px;
-    margin-top: 40px;
-    text-transform: uppercase;
-}
-
-#events p:first-child{
-    width: 300px;
-    margin-left: 10px;
-    margin-top: 0;
-}
-
-#one {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-#two {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-#three {
-    font-weight: 300;
-    font-size: 30px;
-}
-
-.small {
-    font-size: 0.6em;
-}
-
-i,
-.wider {
-    letter-spacing: 3px;
-}
-
-p {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 2px;
-    line-height: 1.6em;
-}
+}*/

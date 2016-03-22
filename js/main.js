@@ -10,7 +10,7 @@ var gui, controls, stats;
 
 function init() {
     scene = new THREE.Scene();
-    camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -10000, 10000)
+    camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2*1.4, window.innerHeight / 2*1.4, window.innerHeight / -2, -10000, 10000)
     camera.position.z = 3;
     renderer = new THREE.WebGLRenderer({
         antialiasing: true
@@ -30,7 +30,7 @@ function init() {
     texture.format = THREE.RGBFormat;
     texture.generateMipmaps = false;
 
-    var geometry = new THREE.PlaneGeometry(window.innerWidth, window.innerHeight);
+    var geometry = new THREE.PlaneGeometry(window.innerWidth*1.4, window.innerHeight*1.4);
     var material = new THREE.MeshBasicMaterial({
         map: texture
     });
@@ -58,7 +58,7 @@ function init() {
         size: 1.0
     };
     filmParams = {
-        count: 650,
+        count: 900,
         sIntensity: 0.1,
         nIntensity: 1.0
     };
@@ -107,7 +107,7 @@ function init() {
         badtvPass.uniforms["speed"].value = Math.random() * 0.3 + 0.2;
         rgbPass.uniforms["angle"].value = Math.random() * 2 + 0.5;
         rgbPass.uniforms["amount"].value = Math.random() * 0.03 + 0.005;
-        staticPass.uniforms["size"].value = Math.random() * 1.2 + 0.3;
+        staticPass.uniforms["size"].value = Math.random() * 1.2 + 0.2;
         setTimeout(function() {
             // reset to init parameters
             onParamsChange();
@@ -120,7 +120,7 @@ function init() {
 }; // init end
 
 function onWindowResize(e) {
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth*1.4, window.innerHeight*1.4);
 }
 
 function onToggleShaders() {
