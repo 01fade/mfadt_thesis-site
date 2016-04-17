@@ -20,19 +20,14 @@
 
 body {
     margin: 0;
-    overflow: hidden;
     font-family: "FreeUniversalRegular", "Oswald", sans-serif;
     font-weight: 300;
     line-height: 2em;
 }
 
 #WebGL-output canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
+    width: 100vw;
+    height: calc(100vh - 120px);
 }
 
 #Stats-output {
@@ -43,8 +38,8 @@ body {
 }
 
 #container {
-    position: fixed;
-    bottom: 80px;
+    position: absolute;
+    top: 600px;
     width: 100vw;
 }
 
@@ -52,7 +47,7 @@ body {
     width: 60vw;
     top: 100px;
     left: 40px;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     text-transform: uppercase;
 }
@@ -66,8 +61,8 @@ body {
 #events p {
     font-size: 16px;
     float: left;
-    width: 100vw;
-    padding: 8px 40px;
+    width: 50%;
+    margin: 8px 40px;
 }
 
 /*@media screen and (min-width: 980px) {
@@ -93,7 +88,7 @@ b {
 #three {
     font-size: 30px;
     line-height: 60px;
-    letter-spacing: 8px;
+    letter-spacing: 1px;
 }
 
 .small {
@@ -111,14 +106,15 @@ p {
     line-height: 1.6em;
     margin: 0;
     color: #221D68;
+    text-shadow: 0 0 15px rgba(236, 124, 74, 0.5);
 }
 
 #dt {
     text-transform: uppercase;
-    position: fixed;
+    position: absolute;
     z-index: 20;
     right: 0;
-    top: 70vh;
+    top: 60vh;
     /* Safari */
     -webkit-transform: rotate(90deg);
     /* Firefox */
@@ -154,32 +150,5 @@ p {
     position: absolute;
     z-index: 20;
     right: 30vw;
-    bottom: 10vh;
+    bottom: 120px;
 }
-
-
-/*button {
-    padding: 20px;
-    background-color: #000;
-    border: 2px solid #fff;
-    color: #fff;
-    font-family: Oswald, sans-serif;
-    font-size: inherit;
-}
-
-button:hover {
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-}
-
-a,
-a:visited {
-    color: #ff;
-    text-decoration: none;
-}
-
-a:hover,
-span {
-    border-bottom: 1px solid #ff;
-}*/

@@ -1,5 +1,5 @@
 var camera, scene, renderer;
-var video, texture, videoMaterial;
+var video, image, texture, videoMaterial;
 var composer;
 var shaderTime = 0;
 var rgbParams, badtvParams, staticParams, filmParams;
@@ -10,7 +10,7 @@ var gui, controls, stats;
 
 function init() {
     scene = new THREE.Scene();
-    camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2*1.4, window.innerHeight / 2*1.4, window.innerHeight / -2, -10000, 10000)
+    camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -10000, 10000)
     camera.position.z = 3;
     renderer = new THREE.WebGLRenderer({
         antialiasing: true
@@ -18,19 +18,20 @@ function init() {
     renderer.setClearColor(new THREE.Color(0x000000, 1.0));
     $("#WebGL-output").append(renderer.domElement);
 
-    video = document.createElement('video');
-    video.loop = true;
-    video.volume = 0.9;
-    video.src = "assets/bs.mp4";
-    video.play();
+    // video = document.createElement('video');
+    // video.loop = true;
+    // video.volume = 0.9;
+    // video.src = "assets/bs.mp4";
+    // video.play();
 
-    texture = new THREE.Texture(video);
+    texture = new THREE.TextureLoader().load( "img/test.jpg" );
+    // texture = new THREE.Texture(video);
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
     texture.format = THREE.RGBFormat;
     texture.generateMipmaps = false;
 
-    var geometry = new THREE.PlaneGeometry(window.innerWidth*1.4, window.innerHeight*1.4);
+    var geometry = new THREE.PlaneGeometry(window.innerWidth, window.innerHeight);
     var material = new THREE.MeshBasicMaterial({
         map: texture
     });
@@ -120,7 +121,7 @@ function init() {
 }; // init end
 
 function onWindowResize(e) {
-    renderer.setSize(window.innerWidth*1.4, window.innerHeight*1.4);
+    renderer.setSize(window.innerWidth*1, window.innerHeight*1);
 }
 
 function onToggleShaders() {
@@ -184,9 +185,9 @@ function animate() {
     filmPass.uniforms['time'].value = shaderTime;
     staticPass.uniforms['time'].value = shaderTime;
 
-    if (video.readyState === video.HAVE_ENOUGH_DATA) {
-        if (texture) texture.needsUpdate = true;
-    }
+    // if (video.readyState === video.HAVE_ENOUGH_DATA) {
+    //     if (texture) texture.needsUpdate = true;
+    // }
 
     requestAnimationFrame(animate);
     composer.render(camera, scene);
